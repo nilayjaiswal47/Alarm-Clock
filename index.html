@@ -1,0 +1,146 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Template</title>
+    <!-- for Favicon -->
+    <link
+      rel="icon"
+      type="image/png"
+      href="https://www.google.com/s2/favicons?domain=jacinto.design"
+    />
+    <!-- for FontAwesome -->
+    <link
+      rel="stylesheet"
+      href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css"
+    />
+    <link rel="stylesheet" href="style.css" />
+  </head>
+  <body>
+    <div class="backgound-container">
+      <div class="background-boxes">
+        <div></div>
+        <div></div>
+        <div></div>
+        <div></div>
+        <div></div>
+        <div></div>
+        <div></div>
+        <div></div>
+        <div></div>
+        <div></div>
+      </div>
+    </div>
+    <div class="main-container">
+      <!-- for current timing -->
+      <div class="time-container">
+        <div class="current-time">00:00:00</div>
+      </div>
+      <!-- for setting alarm -->
+      <div class="set-alarm-container">
+        <form>
+          <input
+            class="alarm-hours"
+            type="number"
+            min="0"
+            max="23"
+            placeholder="hr"
+          />:
+          <input
+            class="alarm-minutes"
+            type="number"
+            min="0"
+            max="59"
+            placeholder="mn"
+          />:
+          <input
+            class="alarm-seconds"
+            type="number"
+            min="0"
+            max="59"
+            placeholder="sec"
+          />
+        </form>
+        <button class="set-alarm-btn">Set Alarm</button>
+      </div>
+      <!--Alarms Lists -->
+      <div class="display-alarms-container">
+        <div>
+          <h3 class="alarms-text">Alarms</h3>
+        </div>
+        <div class="alarm-list-container">
+          <ul type="none" class="alarm-list">
+            <li class="alarm-1">
+              <div class="alarm-timer-1">00:00:00 PM</div>
+              <div class="toggle-container">
+                <input type="checkbox" id="toggle-btn-1" checked />
+                <label
+                  for="toggle-btn-1"
+                  class="toggle-btn-label label-1"
+                ></label>
+              </div>
+              <button class="delete-alarm-btn-1" onclick="deleteButton(event)">
+                <i class="fa-solid fa-trash"></i>
+              </button>
+            </li>
+            <li class="alarm 2">
+              00:00:00 PM
+              <div class="toggle-container">
+                <input type="checkbox" id="toggle-btn-2" checked />
+                <label
+                  for="toggle-btn-2"
+                  class="toggle-btn-label label-2"
+                ></label>
+              </div>
+              <button class="delete-alarm-btn-2" onclick="deleteButton(event)">
+                <i class="fa-solid fa-trash"></i>
+              </button>
+            </li>
+            <li class="alarm-3">
+              00:00:00 PM
+              <div class="toggle-container">
+                <input type="checkbox" id="toggle-btn-3" checked />
+                <label
+                  for="toggle-btn-3"
+                  class="toggle-btn-label label-3"
+                ></label>
+              </div>
+              <button class="delete-alarm-btn-3" onclick="deleteButton(event)">
+                <i class="fa-solid fa-trash"></i>
+              </button>
+            </li>
+            <li class="alarm-4">
+              00:00:00 PM
+              <div class="toggle-container">
+                <input type="checkbox" id="toggle-btn-4" checked />
+                <label
+                  for="toggle-btn-4"
+                  class="toggle-btn-label label-4"
+                ></label>
+              </div>
+              <button class="delete-alarm-btn-4">
+                <i class="fa-solid fa-trash"></i>
+              </button>
+            </li>
+          </ul>
+        </div>
+      </div>
+      <!-- Delte all button -->
+      <div class="delete-all-container">
+        <button class="delete-all-btn">
+          Delete All
+          <i class="fa-solid fa-trash"></i>
+        </button>
+      </div>
+    </div>
+    <div class="stop-alarm-container">
+      <span class="stop-alarm-time">00:00:00</span>
+      <button class="stop-alarm-btn" onclick="stopAlarm(event)">
+        Stop Alarm
+      </button>
+    </div>
+    <!-- Script -->
+    <script src="script.js"></script>
+  </body>
+</html>
